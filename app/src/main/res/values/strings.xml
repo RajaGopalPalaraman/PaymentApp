@@ -9,4 +9,10 @@
     <string name="email">Email Id</string>
     <string name="aadhar">Aadhar No</string>
     <string name="register">Register</string>
+    <string name="recharge">Recharge</string>
+    <string name="money_transfer">Money Transfer</string>
+    <string name="contacts">Contacts</string>
+    <string name="mobile">Mobile No</string>
+    <string name="pay">Pay</string>
+    <string name="amount">Amount</string>
 </resources>
