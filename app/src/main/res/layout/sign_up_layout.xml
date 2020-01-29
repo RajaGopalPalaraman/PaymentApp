@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:paddingTop="70dp"
+    android:paddingStart="30dp"
+    android:paddingEnd="30dp"
+    android:paddingBottom="70dp">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_header"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="90sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <TextView
+        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text="@string/username"
+        android:textSize="25sp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintRight_toLeftOf="@id/username"/>
+
+    <EditText
+        android:layout_marginTop="100dp"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:hint="@null"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:id="@+id/username"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text="@string/phone"
+        android:textSize="25sp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/username"
+        app:layout_constraintRight_toLeftOf="@id/phone"/>
+
+    <EditText
+        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:hint="@null"
+        android:importantForAutofill="no"
+        android:inputType="phone"
+        android:id="@+id/phone"
+        app:layout_constraintTop_toBottomOf="@id/username"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text="@string/email"
+        android:textSize="25sp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/phone"
+        app:layout_constraintRight_toLeftOf="@id/email"/>
+
+    <EditText
+        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:hint="@null"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
+        android:id="@+id/email"
+        app:layout_constraintTop_toBottomOf="@id/phone"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text="@string/aadhar"
+        android:textSize="25sp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        app:layout_constraintRight_toLeftOf="@id/aadhar"/>
+
+    <EditText
+        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:hint="@null"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:id="@+id/aadhar"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text="@string/password"
+        android:textSize="25sp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/aadhar"
+        app:layout_constraintRight_toLeftOf="@id/password"/>
+
+    <EditText
+        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:hint="@null"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:id="@+id/password"
+        app:layout_constraintTop_toBottomOf="@id/aadhar"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/register"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
