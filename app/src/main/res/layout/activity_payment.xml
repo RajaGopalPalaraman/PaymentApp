@@ -35,17 +35,18 @@
             android:layout_width="150dp"
             android:layout_height="45dp"/>
 
-        <ImageView
-            android:onClick="contacts"
-            android:src="@drawable/ic_contacts_black"
-            android:clickable="true"
-            android:id="@+id/contact_view"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:focusable="true"
-            android:contentDescription="@string/contacts" />
-
     </LinearLayout>
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:onClick="contacts"
+        android:src="@drawable/ic_contacts_black"
+        android:clickable="true"
+        android:id="@+id/contact_view"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:focusable="true"
+        android:contentDescription="@string/contacts" />
 
     <LinearLayout
         android:orientation="horizontal"

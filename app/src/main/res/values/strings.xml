@@ -15,4 +15,9 @@
     <string name="mobile">Mobile No</string>
     <string name="pay">Pay</string>
     <string name="amount">Amount</string>
+    <string name="unable_to_load_firmware">Unable to load Firmware</string>
+    <string name="load_firmware_success">Firmware successfully loaded</string>
+    <string name="unable_to_initialize_device">Unable to initialize device</string>
+    <string name="device_initialization_success">Device successfully initialized</string>
+    <string name="scanning">Scanning</string>
 </resources>
