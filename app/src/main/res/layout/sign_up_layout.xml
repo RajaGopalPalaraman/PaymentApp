@@ -96,34 +96,11 @@
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="45dp"
-        android:text="@string/aadhar"
-        android:textSize="20sp"
-        android:layout_marginEnd="20dp"
-        android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@id/email"
-        app:layout_constraintRight_toLeftOf="@id/aadhar"/>
-
-    <EditText
-        android:lines="1"
-        android:layout_marginTop="20dp"
-        android:layout_width="200dp"
-        android:layout_height="45dp"
-        android:hint="@null"
-        android:importantForAutofill="no"
-        android:inputType="number"
-        android:id="@+id/aadhar"
-        app:layout_constraintTop_toBottomOf="@id/email"
-        app:layout_constraintRight_toRightOf="parent"/>
-
-    <TextView
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
         android:text="@string/password"
         android:textSize="20sp"
         android:layout_marginEnd="20dp"
         android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@id/aadhar"
+        app:layout_constraintTop_toBottomOf="@id/email"
         app:layout_constraintRight_toLeftOf="@id/password"/>
 
     <EditText
@@ -135,7 +112,7 @@
         android:importantForAutofill="no"
         android:inputType="textPassword"
         android:id="@+id/password"
-        app:layout_constraintTop_toBottomOf="@id/aadhar"
+        app:layout_constraintTop_toBottomOf="@id/email"
         app:layout_constraintRight_toRightOf="parent"/>
 
     <Button

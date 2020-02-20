@@ -17,6 +17,7 @@ import com.mantra.mfs100.MFS100Event;
 public class FingerPrintScannerActivity extends AppCompatActivity implements MFS100Event {
 
     public static final String ISO_TEMPLATE = "ISOTemplate";
+    public static final String ISO_TEMPLATE_REQUIRED = "ISOTemplateRequired";
 
     private static final long THRESHOLD = 1500L;
     private static final int TIME_OUT = 10000;
@@ -24,6 +25,8 @@ public class FingerPrintScannerActivity extends AppCompatActivity implements MFS
     private static final int FINGER_PRINT_DATA_WHAT = 100;
 
     private MFS100 mfs100 = null;
+
+    private boolean isoTemplate;
 
     private long mLastAttTime=0L;
     private long mLastDttTime=0L;
@@ -34,6 +37,7 @@ public class FingerPrintScannerActivity extends AppCompatActivity implements MFS
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_finger_print_scanner);
+        isoTemplate = getIntent().getBooleanExtra(ISO_TEMPLATE_REQUIRED, false);
         handler = new Handler(getMainLooper()) {
             @Override
             public void handleMessage(@NonNull Message msg) {
@@ -43,7 +47,8 @@ public class FingerPrintScannerActivity extends AppCompatActivity implements MFS
                         setResult(RESULT_OK);
                     } else {
                         FingerData fingerData = (FingerData) msg.obj;
-                        setResult(RESULT_OK, new Intent().putExtra(ISO_TEMPLATE, fingerData.ISOTemplate()));
+                        setResult(RESULT_OK, new Intent().putExtra(ISO_TEMPLATE,
+                                isoTemplate? fingerData.ISOTemplate() : fingerData.FingerImage()));
                     }
                     finish();
                 }
