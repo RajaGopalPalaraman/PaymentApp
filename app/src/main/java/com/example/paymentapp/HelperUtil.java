@@ -7,18 +7,18 @@ public final class HelperUtil {
 
     private static final String PREFERENCE_KEY = "easy_pay_app_preference";
 
-    private static final String USER_ID_KEY = "user_id";
+    private static final String USER_AUTH_TOKEN_KEY = "user_ayth_token";
 
-    static void setUseId(Context context, int userId) {
+    static void setUserAuthToken(Context context, String token) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(
                 PREFERENCE_KEY, Context.MODE_PRIVATE);
-        sharedPreferences.edit().putInt(USER_ID_KEY, userId).apply();
+        sharedPreferences.edit().putString(USER_AUTH_TOKEN_KEY, token).apply();
     }
 
-    static int getUseId(Context context) {
+    static String getUserAuthToken(Context context) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(
                 PREFERENCE_KEY, Context.MODE_PRIVATE);
-        return sharedPreferences.getInt(USER_ID_KEY, -1);
+        return sharedPreferences.getString(USER_AUTH_TOKEN_KEY, null);
     }
 
 }

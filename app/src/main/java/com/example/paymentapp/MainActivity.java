@@ -12,7 +12,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.edot.network.HttpPOSTClient;
-import com.google.gson.Gson;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -33,6 +32,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if (HelperUtil.getUserAuthToken(this) != null) {
+            startActivity(new Intent(MainActivity.this, HomeActivity.class));
+            finish();
+            return;
+        }
+
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         handler = new Handler(getMainLooper()) {
@@ -41,16 +46,12 @@ public class MainActivity extends AppCompatActivity {
                 super.handleMessage(msg);
                 if (msg.what == LOGIN_RESPONSE_WHAT) {
                     String data = (String) msg.obj;
-                    if (data == null) {
-                        Toast.makeText(MainActivity.this, "Unable to connect", Toast.LENGTH_SHORT).show();
-                    } else if (data.isEmpty()) {
+                    if (data == null || data.isEmpty()) {
                         Toast.makeText(MainActivity.this, "Invalid Login Credentials", Toast.LENGTH_SHORT).show();
                         password.setText("");
                     } else {
                         Toast.makeText(MainActivity.this, "Login Success", Toast.LENGTH_SHORT).show();
-                        Gson gson = new Gson();
-                        Models.User user = gson.fromJson(data, Models.User.class);
-                        HelperUtil.setUseId(MainActivity.this, user.getId());
+                        HelperUtil.setUserAuthToken(MainActivity.this, data);
                         startActivity(new Intent(MainActivity.this, HomeActivity.class));
                         finish();
                     }
@@ -81,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
             HashMap<String, String> paramsMap = new HashMap<>();
             paramsMap.put("username", username.getText().toString());
             paramsMap.put("password", password.getText().toString());
-            if (httpPOSTClient.establishConnection("http://192.168.43.91:8080/payapp/login", paramsMap)) {
+            if (httpPOSTClient.establishConnection("http://34.93.106.150:8080/payapp/login", paramsMap)) {
                 InputStream inputStream = httpPOSTClient.getInputStream();
                 byte[] bytes = new byte[50];
                 int length;
