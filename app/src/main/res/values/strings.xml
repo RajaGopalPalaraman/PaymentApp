@@ -20,4 +20,22 @@
     <string name="unable_to_initialize_device">Unable to initialize device</string>
     <string name="device_initialization_success">Device successfully initialized</string>
     <string name="scanning">Scanning</string>
+    <string name="id">Id</string>
+    <string name="details">My Profile</string>
+    <string name="add_money">Add Money</string>
+    <string name="transfer_money">Transfer</string>
+    <string name="enter_amount">Enter Amount:</string>
+    <string name="add">Add</string>
+    <string name="logout">Logout</string>
+    <string name="enter_username_or_mobile_number">Email / Mobile Number / Username</string>
+    <string name="key">User</string>
+    <string name="transfer">Transfer</string>
+    <string name="available_balance">Available Balance</string>
+    <string name="register_service">Register Service</string>
+    <string name="start_service">Start Service</string>
+    <string name="start">Start</string>
+    <string name="service">Service</string>
+    <string name="deny">Deny</string>
+    <string name="confirm">Confirm</string>
+    <string name="fingerprint">Fingerprint</string>
 </resources>

@@ -101,7 +101,7 @@ public class SignUpActivity extends AppCompatActivity {
         new Thread(() -> {
             try {
                 HttpURLConnection urlConnection = (HttpURLConnection) (
-                        new URL("http://192.168.43.91:8080/payapp/sign_up")).openConnection();
+                        new URL(Constants.SERVER_URL + "/sign_up")).openConnection();
                 urlConnection.setDoOutput(true);
                 urlConnection.setDoInput(true);
                 urlConnection.setRequestProperty("Content-Type",
