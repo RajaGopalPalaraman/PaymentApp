@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/personal" android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/ic_attach_money_black_24dp"
+            android:id="@+id/add_money"
+            android:checkable="true"
+            android:enabled="true"
+            android:title="@string/add_money"/>
+
+        <item
+            android:icon="@drawable/ic_show_chart_black_24dp"
+            android:id="@+id/transfer"
+            android:checkable="true"
+            android:enabled="true"
+            android:title="@string/transfer_money"/>
+    </group>
+
+    <group android:id="@+id/his_move" android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/ic_add_shopping_cart_black_24dp"
+            android:id="@+id/register_service"
+            android:checkable="true"
+            android:enabled="true"
+            android:title="@string/register_service"/>
+
+        <item
+            android:icon="@drawable/ic_settings_remote_black_24dp"
+            android:id="@+id/start_service"
+            android:checkable="true"
+            android:enabled="true"
+            android:title="@string/start_service"/>
+    </group>
+
+    <item
+        android:icon="@drawable/ic_power_settings_new_black_24dp"
+        android:id="@+id/logout"
+        android:checkable="true"
+        android:enabled="true"
+        android:title="@string/logout"/>
+
+</menu>

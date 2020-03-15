@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -82,9 +83,9 @@ public class MainActivity extends AppCompatActivity {
             HashMap<String, String> paramsMap = new HashMap<>();
             paramsMap.put("username", username.getText().toString());
             paramsMap.put("password", password.getText().toString());
-            if (httpPOSTClient.establishConnection("http://34.93.106.150:8080/payapp/login", paramsMap)) {
+            if (httpPOSTClient.establishConnection(Constants.SERVER_URL + "/login", paramsMap)) {
                 InputStream inputStream = httpPOSTClient.getInputStream();
-                byte[] bytes = new byte[50];
+                byte[] bytes = new byte[100];
                 int length;
                 try {
                     ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
