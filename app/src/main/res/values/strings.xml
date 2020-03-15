@@ -37,4 +37,5 @@
     <string name="service">Service</string>
     <string name="deny">Deny</string>
     <string name="confirm">Confirm</string>
+    <string name="fingerprint">Fingerprint</string>
 </resources>

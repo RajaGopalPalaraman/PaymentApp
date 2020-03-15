@@ -22,6 +22,7 @@
             android:name=".ServiceActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:label="@string/fingerprint"
             android:name=".FingerPrintScannerActivity"
             android:screenOrientation="portrait" />
         <activity
